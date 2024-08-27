@@ -108,7 +108,7 @@
                 class:has-file={selectedFile}
                 on:dragover={handleDragOver}
                 on:drop={handleDrop}
-                on:click={() => document.getElementById('fileInput').click()}
+                on:click={() => document.getElementById("fileInput").click()}
             >
                 {#if selectedFile}
                     <p>{selectedFile.name}</p>
@@ -118,7 +118,9 @@
                         </div>
                     {/if}
 
-                    <button on:click={trimImage}>Trim Image</button>
+                    <button on:click|stopPropagation={trimImage}
+                        >Trim Image</button
+                    >
                 {:else}
                     <p>
                         Drag and drop an image here, or click to select a file
