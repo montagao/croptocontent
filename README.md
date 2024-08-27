@@ -1,38 +1,70 @@
-# create-svelte
+# Crop To Content
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Crop To Content is a web-based tool that automatically removes excess whitespace or transparent areas around images, leaving only the essential content. This tool is particularly useful for processing logos or preparing images for use with other tools.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Drag and drop or select image files
+- Supports common image formats (PNG, JPEG, GIF, etc.)
+- Automatically trims excess space around the image content
+- Preview of original and trimmed images
+- Download option for trimmed images
+- Responsive design for various screen sizes
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Technologies Used
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- [Svelte](https://svelte.dev/) - Frontend framework
+- [ImageMagick](https://github.com/dlemstra/magick-wasm) - Image processing library (WebAssembly version)
+- HTML5 File API
+- CSS3 for styling
 
-## Developing
+## Getting Started
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Prerequisites
 
-```bash
-npm run dev
+- Node.js (version 12 or later)
+- npm (comes with Node.js)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Installation
 
-## Building
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/crop-to-content.git
+   ```
 
-To create a production version of your app:
+2. Navigate to the project directory:
+   ```
+   cd crop-to-content
+   ```
 
-```bash
-npm run build
-```
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-You can preview the production build with `npm run preview`.
+4. Start the development server:
+   ```
+   npm run dev
+   ```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+5. Open your browser and visit `http://localhost:5000` (or the port shown in your terminal).
+
+## Usage
+
+1. Drag and drop an image onto the designated area, or click to select a file.
+2. Once an image is selected, click the "Trim Image" button.
+3. The tool will process the image and display the trimmed version.
+4. Click the "Download" button to save the trimmed image.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+Created by [@montakaoh](https://twitter.com/montakaoh) - feel free to contact me!
+
