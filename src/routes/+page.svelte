@@ -10,6 +10,7 @@
     import { createEventDispatcher } from "svelte";
 
     const dispatch = createEventDispatcher();
+    import { dev } from "$app/environment";
     inject({ mode: dev ? "development" : "production" });
 
     onMount(async () => {
