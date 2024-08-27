@@ -151,14 +151,33 @@
     <h2>FAQ</h2>
     <dl>
         <dt>What does this tool do?</dt>
-        <dd>Crop To Content automatically removes excess whitespace or transparent areas around your images, leaving only the essential content.</dd>
+        <dd>
+            Crop To Content automatically removes excess whitespace or
+            transparent areas around your images, leaving only the essential
+            content.
+        </dd>
         <dd>This might be useful for logos or use with other tools</dd>
-        
+
         <dt>How do I use it?</dt>
-        <dd>Simply drag and drop an image onto the designated area, or click to select a file. Then, click the "Trim Image" button to crop your image to its content.</dd>
-        
+        <dd>
+            Simply drag and drop an image onto the designated area, or click to
+            select a file. Then, click the "Trim Image" button to crop your
+            image to its content.
+        </dd>
+
         <dt>What file types are supported?</dt>
-        <dd>This tool supports common image formats such as PNG, JPEG, GIF, and more.</dd>
+        <dd>
+            This tool supports common image formats such as PNG, JPEG, GIF, and
+            more.
+        </dd>
+
+        <dt>Is my data safe and private?</dt>
+        <dd>
+            All image processing is done entirely on your device (client-side).
+            We don't store or transmit your images to any server. Your files
+            never leave your browser, ensuring complete privacy and security for
+            your data.
+        </dd>
     </dl>
 </div>
 
@@ -287,6 +306,9 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .faq h2 {
@@ -344,6 +366,13 @@
         button {
             font-size: 14px;
             padding: 8px 16px;
+        }
+    }
+
+    @media (max-width: 840px) {
+        .faq {
+            max-width: 95%;
+            padding: 15px;
         }
     }
 </style>
