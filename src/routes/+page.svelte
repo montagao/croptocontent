@@ -108,6 +108,7 @@
                 class:has-file={selectedFile}
                 on:dragover={handleDragOver}
                 on:drop={handleDrop}
+                on:click={() => document.getElementById('fileInput').click()}
             >
                 {#if selectedFile}
                     <p>{selectedFile.name}</p>
@@ -122,13 +123,15 @@
                     <p>
                         Drag and drop an image here, or click to select a file
                     </p>
-                    <input
-                        type="file"
-                        accept="image/*"
-                        on:change={handleFileInput}
-                    />
                 {/if}
             </div>
+            <input
+                id="fileInput"
+                type="file"
+                accept="image/*"
+                on:change={handleFileInput}
+                style="display: none;"
+            />
             {#if errorMessage}
                 <p class="error-message">{errorMessage}</p>
             {/if}
