@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { inject } from "@vercel/analytics";
     import {
         MagickFormat,
         ImageMagick,
@@ -9,6 +10,7 @@
     import { createEventDispatcher } from "svelte";
 
     const dispatch = createEventDispatcher();
+    inject({ mode: dev ? "development" : "production" });
 
     onMount(async () => {
         if (typeof window !== "undefined") {
